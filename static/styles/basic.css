@@ -1,0 +1,59 @@
+.material-icons{
+    cursor:pointer;
+}
+
+input[type=image] {
+ text-align:center;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+.mainDiv {
+    /*border: 5px outset lightcoral;*/
+    background-color: lightblue;
+    text-align: center;
+}
+
+
+body{
+    background-color: #dddddd;
+}
+
+
+
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 20px;
+}
+
+#wrapper{
+ text-align:center;
+margin: auto;
+
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+#center, #left,#right {
+  margin:auto;
+    float:left;
+    /*border: 2px solid blue;
+    /*height:calc(100% - 4px);*/
+}
+#left {
+
+    /*border: 2px solid blue;*/
+    width: calc(25% - 4px);
+}
+
+
+#center {
+    /*border: 2px solid black;*/
+    width: calc(25% - 4px);
+}
+#right {
+    /*border: 2px solid black;*/
+    width: 310;
+
+}

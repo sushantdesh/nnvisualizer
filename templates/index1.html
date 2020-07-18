@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/basic.css') }}">
+    <script src="{{url_for('static', filename='javascript/basic.js')}}"></script>
+    <script src="{{url_for('static', filename='javascript/res.js')}}"></script>
+    <title>nn</title>
+</head>
+
+<body onload="regenerate('random')">
+
+<div class="header"  >
+    <h1>Neural Network Playground</h1>
+
+
+</div>
+
+
+<div id="wrapper">
+<div id="left" class="inline">
+    <label ><h2>Step 1<h3>Select dataset</h3></h2> </label><br>
+    <input type="image" src="{{url_for('static', filename='images/moons_tn.jpg')}}" onclick="regenerate('moon')">
+    <input type="image" src="{{url_for('static', filename='images/circles_tn.jpg')}}"onclick="regenerate('circle')" >
+    <input type="image" src="{{url_for('static', filename='images/blobs_tn.jpg')}}"onclick="regenerate('blob')" ><br>
+    <button id="regenerate" onclick="regenerate()">Regenerate</button>
+    </div>
+<div id="center" class="inline">
+    <label ><h2>Step 2<h3>Add Hidden layers</h3></h2> </label>
+    <label id="layers">0 Layers </label>
+    <i id="addlayer" class="material-icons" onclick="add_layers()" >add_circle</i>
+    <i class="material-icons" onclick="remove_layers()" >remove_circle</i>
+    <div id="nodes" class="inline1"></div><br>
+    <input type="submit" value="Submit" onclick="run()">
+
+
+
+    <button onclick="run()">run</button>
+            </div>
+
+
+<div id="right" class="inline">
+    <label ><h2>Visualize</h2> </label>
+    <label ><h3>Epoch : 0 </h3> </label>
+
+    <svg width="310" height="310" stroke-linejoin="bevel"  stroke-linecap="round" style="border:1px solid black" >
+    </svg>
+</div>
+    </div>
+
+
+<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+<script src="https://d3js.org/d3-contour.v1.min.js" charset="utf-8"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js" charset="utf-8"></script>
+</body>
+</html>
